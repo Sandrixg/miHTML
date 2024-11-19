@@ -1,0 +1,393 @@
+@charset 'UTF-8';
+
+:root {
+  /* Layout */
+  --l_maxWidth: 1400px;
+  --l_headerHeight: 80vh;
+  --l_navbarHeight: 72px;
+  --l_heroHeight: auto;
+  --l_mainHeight: auto;
+  --l_footerHeight: 350px;
+
+  /* Fonts */
+  --f_fontSize: 16px;
+  --f_lineHeight: 1.5rem;
+  --f_fontWeight: 400;
+  --f_fontStyle: normal;
+
+  /* Colors */
+  --c_white: #fff;
+  --c_black: #000;
+  --c_yelow500: #ffff00;
+  --c_grey500: #292928;
+
+  --c_cyan500: #58befe;
+
+  --c_green400: #90d4c5;
+  --c_green700: #2b7262;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  outline: 1px dotted red;
+
+}
+
+html {
+  margin: 0 auto;
+  max-width: var(--l_maxWidth);
+
+  font-size: var(--f_fontSize);
+}
+
+
+img {
+  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+  height: auto;
+  object-fit: cover / contain;
+  object-position: 50% 50%;
+
+}
+
+button {
+  all: unset;
+}
+
+.Body {
+  display: grid;
+
+  grid: var(--l_headerHeight) var(--l_mainHeight) var(--l_footerHeight) / repeat(12, 1fr);
+
+  font-size: clamp(100%, 1rem + 0.75vw, 25px);
+  line-height: var(--f_lineHeight);
+  font-weight: var(--f_fontWeight);
+  font-style: var(--f_fontStyle);
+}
+
+/* --- Comienzo Header --- */
+.Header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 13;
+
+  height: var(--l_headerHeight);
+
+  color: var(--c_white);
+  background-image: url("./Assets/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  & .navbar {
+    padding-inline: 1rem;
+    height: var(--l_navbarHeight);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+  }
+
+  & .hero {
+    height: var(--l_heroHeight);
+
+    & .title--H1 {
+      padding: 2rem 0;
+    }
+
+    & .figure {
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+}
+
+/* --- Comienzo Main -- */
+.Main {
+  grid-row: 2 / 3;
+  grid-column: 1 / 13;
+
+
+  & .section {
+    display: flex;
+    flex-direction: row;
+
+    & .article {
+      width: 50%;
+      padding-inline: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+
+      & .picture {
+        width: 50%;
+      }
+    }
+  }
+}
+
+& .gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+& .section:nth-child(3) {
+  height: 600px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: sreach;
+  justify-content: center;
+
+  & .article {
+    padding-bottom: 2rem;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: end;
+
+    text-align: center;
+
+    color: var(--c_black);
+  }
+
+  & .article:first-child {
+    background: url("./Assets/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  & .article:last-child {
+    background: url("./Assets/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+& .section:nth-child(4) .article {
+  width: 100%;
+  height: 600px;
+
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+
+    gap: 2rem;
+
+  }
+}
+
+& .modal {
+  & form {
+    & fielset {
+      & label {}
+
+      & input {}
+    }
+
+    & .btn-group {
+      & button {}
+    }
+  }
+}
+
+/* --- Comienzo Footer -- */
+.Footer {
+  grid-row: 3 / 4;
+  grid-column: 1 / 13;
+
+  height: var(--l_footerHeight);
+
+  color: var(--c_green700);
+  background-color: var(--c_green400);
+
+  & .section {
+    height: 100%;
+
+    & .article {
+      height: inherit;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+}
+
+/* --- Components --- */
+.title--H1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.title--H2 {
+  font-size: 2.25rem;
+}
+
+.title--H3 {
+  font-size: 2rem;
+}
+
+.title--H4 {
+  text-align: center;
+  font-size: 1.75;
+  color: var(--c_grey500);
+}
+
+.paragraph,
+.card__description {
+  max-width: 42ch;
+}
+
+.link {
+  font-weight: calc(var(--f_fontWeight) + 300);
+  text-decoration: none;
+  color: var(--c_black);
+  text-shadow: 3px 3px var(--c_yelow500);
+}
+
+.logo {
+  & .logo__img {
+    scale: 1;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+
+  gap: 2rem;
+
+  & .menu__item {
+    list-style-type: none;
+
+    & .menu__item--link {
+      text-decoration: none;
+
+      color: var(--c_white);
+
+      & .figure {
+        & .figure__img {}
+      }
+    }
+  }
+}
+
+.button {
+  padding: 0.5rem 3rem;
+
+  border-radius: 2rem;
+
+  background-color: var(--c_white);
+  color: var(--c_black);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+
+  & .card__figure {
+    & .card__figure--img {
+      border-radius: 50%;
+    }
+  }
+
+  & .card__description {}
+
+  & .card__person {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    text-align: center;
+
+    & .card__person--name {
+      font-weight: calc(var(--f_fontWeight) + 200);
+    }
+
+    & .card__person--job {
+      font-style: italic;
+    }
+  }
+}
+
+/*--Media Query--*/
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+  .Body {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .Main {
+    & .section {
+      flex-direction: column;
+
+      & .article {
+        width: 100%;
+      }
+    }
+
+    & .section:nth-child(3)   {
+      flex-direction: column;
+    }
+
+    & .section:nth-child(4) .article .container {
+      flex-direction: column;
+    }
+
+    & .gallery {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width : 767px) {
+  .Body {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .Main {
+    & .section {
+      flex-direction: column;
+
+      & .article {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width:389px) {
+  .Body {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+  .Main {
+    & .section {
+      flex-direction: column;
+
+      & .article {
+        width: 100%
+     }
+    }
+  }
+}

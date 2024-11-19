@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=header, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href= "./Style.css"/>
+
+</head>
+<body class="Body">
+
+    <header class="Header">
+        <nav class="navbar">
+            <figure class="logo" width="150px" height="50px">
+                <img class="logo__img" width="130px" height="40px" src="./Assets/logo.svg"    
+                alt="logo Sunnyside">
+            </figure>
+            
+            <menu class="menu">  
+                <li class="menu__item">
+                   <a class="menu__item--link" href="URI--About" >About</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item--link" href="URI--Services" >Services</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item--link" href="URI--Projects">Proyects</a>
+                </li>
+            </menu>
+            
+            <button class="button">
+                Contact
+            </button>                 
+
+               
+        </nav>
+        <div class="hero">
+            <h1 class="title--H1">We are Creatives</h1>
+            <figure class="figure">
+                <img 
+                class="logo__img" src="./Assets/icon-arrow-down.svg" 
+                alt="">
+            </figure>
+        </div>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Comienzo Aside -->
+    <aside class="Aside">
+        <section class="section" >
+            <article class="article">
+            </article>
+        </section>
+    </aside>
+    <!-- Fin Aside -->
+    <!-- Comienzo Main -->
+    <main class="Main">
+        <section class="section">
+            <article class="article">
+                <h2 class= "title--H2"> Transform your brand</h2>
+                <p class="paragraph">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quidem quas dolorum dolorem
+                    consequatur enim repellat a, quia aspernatur iure.
+                </p>
+                <a class="link" href="">Learn More</a>
+            </article>
+            <picture class="picture">
+                <img class= "picture__img" src="./Assets/image-transform.jpg" alt="El huevo con cascara con fondo amarillo.">
+            </picture>
+        </section>
+
+        <section class="section">
+            <picture class="picture">
+                <img class="picture__img" src="./Assets/image-stand-out.jpg" alt="copa rosa con fondo rosa.">
+            </picture>
+            <article class="article">
+                <h2 class="title--H2">Stand out to right audience</h2>
+                <p class="paragraph">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quidem quas dolorum dolorem
+                    consequatur enim repellat a, quia aspernatur iure.
+                </p>
+                <a class="link" href="">Learn More</a>
+            </article>
+            </section>
+
+        <section class="section">
+            <article class="article">
+                <h3 class="title--H3" >Graphic Design</h3>
+                <p class="paragraph ">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, esse.
+                </p>
+            </article>    
+       
+            <article class="article">
+                <h3 class="title--H3">Photography</h3>
+                <p class="paragraph">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, repellendus?
+                </p>            
+
+            </article>
+        </section>
+
+        <section class="section">
+            <article class="article">
+                <h4 class="title--H4">Client Testimonials</h4>
+                
+                <div class="container">  
+                <!-- Card -->
+                <dl class="card">
+                    <!-- Avatar -->
+                    <figure class="card__figure">
+                        <img class="card__figure--img" src="./Assets/image-emily.jpg" alt="Emily la chica que
+                         da testimonio."/>
+                    </figure>
+                    <!-- Description card -->
+                    <dd class="card__description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, iste?
+                    </dd>
+                    <!-- Cargo -->
+                    <dt class="card__person">
+                        <span class="card__person--name" >Emily R.</span>
+                        <span class="card__person--job" >Cargo </span>
+                    </dt>
+                </dl>
+
+                <dl class="card">
+                    <!-- Avatar -->
+                    <figure class="card__figure">
+                        <img class="card__figure--img" src="./Assets/image-thomas.jpg" alt="Thomas el segundo testimonio.">
+                    </figure>
+                    <!-- Description card -->
+                    <dd class="card__descripction">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, iste?
+                    </dd>
+                    <!-- Cargo -->
+                    <dt class="card__person">
+                        <span class="card__person--name" >Thommas G.</span>
+                        <span class="card__person--job" >Cargo </span>
+                    </dt>
+                </dl>
+
+                <dl class="card">
+                    <!-- Avatar -->
+                    <figure class="card__figure">
+                        <img class="card__figure--img" src="./Assets/image-jennie.jpg" alt="El ultimo testimonio es el de Jenny.">
+                    </figure>
+                    <!-- Description card -->
+                    <dd class="card__descripction">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, iste?
+                    </dd>
+                    <!-- Cargo -->
+                    <dt class="card__person">
+                        <span class="card__person--name" >Jennie W.</span>
+                        <span class="card__person--job" >Cargo </span>
+                    </dt>
+                </dl>
+                </div>
+            </article>
+        </section>
+
+        <figure class="gallery">
+            <img class="gallery__image" height="500px" width="340px" src="./Assets/image-gallery-milkbottles.jpg" alt="botellas de leche">
+            <img class="gallery__image" height="500px" width="340px" src="./Assets/image-gallery-orange.jpg" alt="la otra naranja con fondo naranja">
+            <img class="gallery__image" height="500px" width="340px" src="./Assets/image-gallery-cone.jpg" alt="conito de helado">
+            <img class="gallery__image" height="500px" width="340px" src="./Assets/image-gallery-sugarcubes.jpg" alt="cubos de azucar fondo rosa.">
+        </figure>
+
+        <dialog class="modal" id="js-modal" open>
+            <form action="">
+                <fieldset>
+                <label for="">Name</label>
+                <input type="text" required> </fieldset>
+                <fieldset>
+                    <label for="">email</label>
+                    <div class="btn-group">
+                        <button id="cancel" type="reset">Cancel</button>
+                        <button type="submit">Confirm</button>
+                    </div>
+                </fieldset>
+            </form>
+        </dialog>
+    </main>
+    <!-- Fin Main -->
+    <!-- Comienzo Footer -->
+    <footer class="Footer">
+        <section class="section">
+            <article class="article">
+                <figure class="logo">
+                    <img class="logo__img" src="./logo.svg" alt="El logo de Sunnyside que esta abajo de todo en la web">
+                </figure>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__item--link" href="#URI--About">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__item--link" href="#URI--Services">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__item--link" href="#URI--Projects">Projects</a>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <!-- Facebook -->
+                    <li class="menu__item">
+                        <a class="menu__item--link " href="">
+                            <figure class="figure">
+                                <img class="figure__img" src="./Assets/icon-facebook.svg" alt="icono pequeño de Facebook">
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- Instagram -->
+                    <li class="menu__item">
+                        <a class="menu__item--link " href="">
+                            <figure class="figure">
+                                <img class="figure__img" src="./icon-instagram.svg" alt="icono pequeñomde Instagram">
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- X -->
+                    <li class="menu__item">
+                        <a class="menu__item--link " href="">
+                            <figure class="figure">
+                                <img class="figure__img" src="./icon-twitter.svg" alt="icono pequeño de X">
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- Pinterest -->
+                    <li class="menu__item">
+                        <a class="menu__item--link " href="">
+                            <figure class="figure">
+                                <img class="figure__img" src=".//icon-pinterest.svg" alt="icono pequeño de Pinterest">
+                            </figure>
+                        </a>
+                    </li>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </footer>
+    <!--Fin del footer-->
+</body>
+
+</html>
